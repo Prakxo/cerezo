@@ -39,7 +39,8 @@ segments:
     subalign: 4
     subsegments:
       - [0x800, rodata, 800]
-      - [0x518C, asm, 518C]
+      - [0x518C, c, main]
+      - [0x51D8, asm, 51D8]
       - [0x44330, asm, 44330]
       - [0x59990, data, 59990]
   - [0x1C3000]

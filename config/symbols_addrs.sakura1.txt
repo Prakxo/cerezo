@@ -1,3 +1,5 @@
+main = 0x8001498C;
+ResetCallback = 0x80053EC0;
 func_8005E1D0 = 0x8005E1D0;
 func_8005E2E0 = 0x8005E2E0;
 func_8005E2F0 = 0x8005E2F0;
