@@ -1,0 +1,17 @@
+/dump/*
+!/dump/SLPS_018.30.sha
+/bin/*
+!/bin/cc1-psx-26.sha
+*.ld
+*.map
+*auto.*.txt
+__pycache__
+
+asm/*.s
+asm/*/*.s
+
+build/
+expected/
+
+undefined_funcs_auto.txt
+undefined_syms_auto.txt

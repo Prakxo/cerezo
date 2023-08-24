@@ -1,0 +1,45 @@
+name: SLPS_018.30
+sha1: 1d9d84497bcecdeffb35459ca4bda0527ffb5041
+options:
+  basename: slps_018.30
+  target_path: ./dump/SLPS_018.30
+  base_path: ..
+  platform: psx
+  compiler: GCC
+
+  asm_path: asm
+  src_path: src
+  build_path: build
+  # create_asm_dependencies: True
+
+  ld_script_path: sakura1.ld
+
+  find_file_boundaries: True
+  
+  gp_value: 0x80077D80
+
+  use_legacy_include_asm: False
+
+  asm_function_macro: glabel
+  asm_jtbl_label_macro: jlabel
+  asm_data_macro: dlabel
+
+  section_order: [".rodata", ".text", ".data", ".bss"]
+  
+
+  symbol_addrs_path: config/symbols_addrs.sakura1.txt
+
+
+segments:
+  - [0, header]
+  - name: main
+    type: code
+    start: 0x800
+    vram: 0x80010000
+    subalign: 4
+    subsegments:
+      - [0x800, rodata, 800]
+      - [0x518C, asm, 518C]
+      - [0x44330, asm, 44330]
+      - [0x59990, data, 59990]
+  - [0x1C3000]
