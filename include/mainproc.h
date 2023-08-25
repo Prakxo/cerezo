@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-void main(void);
+void mainproc(void);
 
 #endif

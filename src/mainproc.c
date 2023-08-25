@@ -1,8 +1,8 @@
-#include "main.h"
+#include "mainproc.h"
 #include "psx/libetc.h"
 #include "unkf.h"
 
-void main(){
+void mainproc(){
 
     func_80053BD8();
     ResetCallback();

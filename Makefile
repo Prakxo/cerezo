@@ -14,13 +14,13 @@ OBJCOPY         := $(CROSS)objcopy
 
 AS_FLAGS        := -Iinclude -march=r3000 -mtune=r3000 -no-pad-sections -Os
 
-CPP_FLAGS       = -undef -lang-c -Wall -fno-builtin -fsigned-char-Iinclude
+CPP_FLAGS       = -undef -lang-c -Wall -fno-builtin -fsigned-char -Iinclude
 CPP_FLAGS       += -Dmips -D__GNUC__=2 -D__OPTIMIZE__ -D__mips__ -D__mips -Dpsx -D__psx__ -D__psx -D_PSYQ -D__EXTENSIONS__ -D_MIPSEL -D_LANGUAGE_C -DLANGUAGE_C
 
 CC_FLAGS        := -O2 -mips1 -mno-abicalls 
 
 CHECK_WARNINGS  := -Wall -Wextra -Wno-format-security -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-variable -Wno-missing-braces -Wno-int-conversion
-CC_CHECK        := $(MODERN_GCC) -fsyntax-only -std=gnu90 -m32 $(CHECK_WARNINGS) $(CPP_FLAGS)
+CC_CHECK        := gcc -fsyntax-only -std=gnu90 -m32 $(CHECK_WARNINGS) $(CPP_FLAGS)
 
 SDATA_LIMIT     := -G4
 AS_SDATA_LIMIT  := -G0
