@@ -125,7 +125,7 @@ $(BUILD_DIR)/%.bin.o: %.bin
 
 $(BUILD_DIR)/%.c.o: %.c $(MASPSX_APP)
 	@$(CC_CHECK) $<
-	$(CPP) $(CPP_FLAGS) $< | $(CC) $(CC_FLAGS) $(SDATA_LIMIT) | $(MASPSX) $(MASPSX_ARGS) | $(AS) $(AS_SDATA_LIMIT) -o $@
+	$(CPP) $(CPP_FLAGS) $< | $(CC) $(CC_FLAGS) $(SDATA_LIMIT) | $(AS) $(AS_SDATA_LIMIT) -o $@
 
 SHELL = /bin/bash -e -o pipefail
 

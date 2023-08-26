@@ -2,7 +2,7 @@ name: SLPS_018.30
 sha1: 1d9d84497bcecdeffb35459ca4bda0527ffb5041
 options:
   basename: slps_018.30
-  target_path: ./dump/SLPS_018.30
+  target_path: dump/SLPS_018.30
   base_path: ..
   platform: psx
   compiler: GCC
@@ -10,7 +10,10 @@ options:
   asm_path: asm
   src_path: src
   build_path: build
+  migrate_rodata_to_functions: yes
   # create_asm_dependencies: True
+
+  rodata_string_guesser_level: 2 # improve string detection
 
   ld_script_path: sakura1.ld
 
@@ -40,12 +43,11 @@ segments:
     subsegments:
       - [0x800, rodata, 800]
       - [0x518C, c, mainproc]
-      - [0x51D8, asm, 51D8]
+      - [0x51D8, asm , 51D8]
       - [0x51DC, c, code_51DC]
       - [0x52B4, asm, 52B4]
       - [0x44330, asm, 44330]
       - [0x59990, data, 59990]
       - [0x68BE0, .data, code_51DC]
       - [0x68BE4, data, 68BE4]
-
-  - [0x1C3000]
+  - [0x1C2FAC]

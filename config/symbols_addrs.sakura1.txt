@@ -1,6 +1,7 @@
 mainproc = 0x8001498C;
 ResetCallback = 0x80053EC0;
 CdInit = 0x80054BF0;
+ResetGraph = 0x8005A2C0;
 AddPrim = 0x8005D4B0;
 func_8005E1D0 = 0x8005E1D0;
 func_8005E2E0 = 0x8005E2E0;
