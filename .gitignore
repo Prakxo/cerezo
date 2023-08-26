@@ -1,7 +1,5 @@
 /dump/*
 !/dump/SLPS_018.30.sha
-/bin/*
-!/bin/cc1-psx-26.sha
 *.ld
 *.map
 *auto.*.txt
